@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer body {
+    body {
+        @apply font-poppins text-sm bg-white text-black;
+    }
+}
+
+@layer components {
+    .container {
+        @apply mx-auto my-0 px-[10px] mobile:min-w-[400px] mobile:max-w-[767px] tablet:max-w-[768px] desktop:max-w-[1280px];
+    }
+}
