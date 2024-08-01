@@ -5,3 +5,6 @@ export const contactFormSchema = yup.object({
     last_name: yup.string().min(4).max(16).required(),
     email: yup.string().email().required(),
 });
+export const tagsFormSchema = yup.object({
+    tags: yup.string().required(),
+});

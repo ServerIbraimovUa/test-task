@@ -2,15 +2,13 @@ import { Link } from "react-router-dom";
 import { useDeleteContactMutation, useGetContactsQuery } from "../services/contacts";
 const placeholder =
     "https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.jpg";
-interface ContactFields {
-    "first name": { value: string }[];
-    "last name": { value: string }[];
-    email: { value: string }[];
-}
-
-interface Contact {
+export interface Contact {
     id: string;
-    fields: ContactFields;
+    fields: {
+        "first name": { value: string }[];
+        "last name": { value: string }[];
+        email: { value: string }[];
+    };
     avatar_url: string;
     tags: {
         id: string;
